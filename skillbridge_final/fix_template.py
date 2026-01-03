@@ -1,0 +1,10 @@
+with open('templates/index.html', 'r', encoding='utf-8') as f:
+    content = f.read()
+
+# Replace escaped backslashes before quotes
+content = content.replace(r'\"', '"')
+
+with open('templates/index.html', 'w', encoding='utf-8') as f:
+    f.write(content)
+
+print("Fixed escaped quotes in index.html")
